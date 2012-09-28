@@ -1,4 +1,7 @@
 # Autoreloading launcher.
+# Borrowed from Django (http://www.djangoproject.com), which borrowed from the
+# CherryPy project. Original text follows.
+# ----------------------------------------
 # Borrowed from Peter Hunt and the CherryPy project (http://www.cherrypy.org).
 # Some taken from Ian Bicking's Paste (http://pythonpaste.org/).
 #
@@ -30,11 +33,8 @@
 
 import os, sys, time, signal
 
-#try:
-#    from django.utils.six.moves import _thread as thread
-#except ImportError:
-#    from django.utils.six.moves import _dummy_thread as thread
-
+# I swapped out django.utils.six.moves._thread for the standard Python thread.
+# It seems to work okay, but I'm not sure if there are hidden gremlins.
 import thread
 
 # This import does nothing, but it's necessary to avoid some race conditions
