@@ -7,7 +7,7 @@ import sys
 class DemoHandler(WebMessageHandler):
     def get(self):
         name = self.get_argument('name', 'dude')
-        self.set_body('Take five, %s!' % name)
+        self.set_body('Take eight, %s!' % name)
         return self.render()
 
 if __name__ == '__main__':

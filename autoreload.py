@@ -35,6 +35,8 @@ import os, sys, time, signal
 #except ImportError:
 #    from django.utils.six.moves import _dummy_thread as thread
 
+import thread
+
 # This import does nothing, but it's necessary to avoid some race conditions
 # in the threading module. See http://code.djangoproject.com/ticket/2330 .
 try:
